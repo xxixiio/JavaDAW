@@ -94,7 +94,7 @@ public class SongTitleAnalyzer {
     }
 
     public List<String> sortAlphabetically(List<String> list) {
-        List<String> orderedList = list;
+        List<String> orderedList = new ArrayList<>(list);
         orderedList.sort(String.CASE_INSENSITIVE_ORDER);
 
         return orderedList;
