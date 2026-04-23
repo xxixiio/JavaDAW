@@ -1,6 +1,7 @@
 package a19_01_arrayListWithNumbers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,12 +11,7 @@ public class ArrayListWithNumbers {
         Scanner sc = new Scanner(System.in);
         ArrayListWithNumbers arrayListWithNumbers = new ArrayListWithNumbers();
 
-        ArrayList<Integer> list = new ArrayList<>();
-        int[] testValues = {1, 2, 3, 8, 3, 7, 15, 22, 25, -4, 5, 12, 2, 8, 15, 0};
-
-        for (int i : testValues) {
-            list.add(i);
-        }
+        List<Integer> list = Arrays.asList(1, 2, 3, 8, 3, 7, 15, 22, 25, -4, 5, 12, 2, 8, 15, 0);
 
         System.out.println("1. Total");
         System.out.println("2. Find positions");
