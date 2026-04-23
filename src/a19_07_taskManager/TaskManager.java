@@ -25,6 +25,62 @@ public class TaskManager {
 
         List<String> tasks = new ArrayList<>(Arrays.asList(values));
 
+        taskManager.showMenu();
+        int option = sc.nextInt();
+        sc.nextLine();
+
+        while(option != 0) {
+            if (option == 1) {
+                System.out.println(tasks);
+            } else if (option == 2) {
+                System.out.println("Enter task name:");
+                String task = sc.nextLine();
+
+                System.out.println(
+                        taskManager.addTask(tasks, task)
+                                ? "Task added"
+                                : "Task not added"
+                );
+            } else if (option == 3) {
+                System.out.println("Enter task name:");
+                String task = sc.nextLine();
+
+                System.out.println("Enter position:");
+                int index = sc.nextInt();
+
+                System.out.println(
+                        taskManager.addTaskAtPosition(tasks, task, index)
+                                ? "Task added"
+                                : "Task not added"
+                );
+            } else if (option == 4) {
+                System.out.println("Enter task name:");
+                String task = sc.nextLine();
+
+                System.out.println(
+                        taskManager.removeTaskByName(tasks, task)
+                                ? "Task removed"
+                                : "Task not found"
+                );
+            } else if (option == 5) {
+                System.out.println("Enter task index:");
+                int index = sc.nextInt();
+
+                String output = taskManager.removeTaskByIndex(tasks, index);
+                if (output == null) {
+                    System.out.println("Task not removed");
+                } else {
+                    System.out.println("Task removed: " + output);
+                }
+            }
+
+            taskManager.showMenu();
+            option = sc.nextInt();
+            sc.nextLine();
+        }
+    }
+
+    private void showMenu() {
         System.out.println("1. Show all tasks");
         System.out.println("2. Add task at the end");
         System.out.println("3. Add task at position");
@@ -32,52 +88,6 @@ public class TaskManager {
         System.out.println("5. Remove task by index");
         System.out.println("0. Exit");
         System.out.println("Choose option:");
-
-        int option = sc.nextInt();
-        sc.nextLine();
-        if (option == 1) {
-            System.out.println(tasks);
-        } else if (option == 2) {
-            System.out.println("Enter task name:");
-            String task = sc.nextLine();
-
-            System.out.println(
-                    taskManager.addTask(tasks, task)
-                            ? "Task added"
-                            : "Task not added"
-            );
-        } else if (option == 3) {
-            System.out.println("Enter task name:");
-            String task = sc.nextLine();
-
-            System.out.println("Enter position:");
-            int index = sc.nextInt();
-
-            System.out.println(
-                    taskManager.addTaskAtPosition(tasks, task, index)
-                            ? "Task added"
-                            : "Task not added"
-            );
-        } else if (option == 4) {
-            System.out.println("Enter task name:");
-            String task = sc.nextLine();
-
-            System.out.println(
-                    taskManager.removeTaskByName(tasks, task)
-                            ? "Task removed"
-                            : "Task not found"
-            );
-        } else if (option == 5) {
-            System.out.println("Enter task index:");
-            int index = sc.nextInt();
-
-            String output = taskManager.removeTaskByIndex(tasks, index);
-            if (output == null) {
-                System.out.println("Task not removed");
-            } else {
-                System.out.println("Task removed: " + output);
-            }
-        }
     }
 
     private int indexOf(List<String> tasks, String task) {
