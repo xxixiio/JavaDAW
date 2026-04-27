@@ -1,0 +1,6 @@
+jugador:puntuació
+ShadowX:4200
+NightWolf:8750
+PixelKing:3100
+StormByte:9600
+LunaFire:6450
