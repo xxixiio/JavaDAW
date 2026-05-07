@@ -14,14 +14,14 @@ public class EmailDomainDetector {
         Set<String> uniqueEmails = new HashSet<>(emails.stream().map(String::toLowerCase).toList());
         Map<String, Integer> domainsMap = new TreeMap<>();
 
-        System.out.println(uniqueEmails);
+        //System.out.println(uniqueEmails);
 
         for (String email : uniqueEmails) {
             email = email.trim().toLowerCase();
             Pattern pattern = Pattern.compile("^[a-z0-9_\\-.]+@[a-z0-9_\\-.]+\\.[a-z]+", Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(email);
 
-            System.out.println(email + " " + matcher.matches());
+            //System.out.println(email + " " + matcher.matches());
 
             if (matcher.matches()) {
                 String domain = email.split("@")[1];
