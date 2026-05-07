@@ -1,6 +1,8 @@
 package a25_01_spamDetector;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SpamDetector {
     public static void main(String[] args) {
@@ -36,32 +38,16 @@ public class SpamDetector {
      * and returns a Map with the number of occurrences of each word.
      */
     public static Map<String, Integer> countForbiddenWords(String text, Set<String> forbiddenWords) {
-        text = text.toLowerCase().trim();
-        ArrayList<String> splitedText = new ArrayList<>();
         Map<String, Integer> count = new HashMap<>();
 
-        String w = "";
-        for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-
-            if (Character.isLetterOrDigit(c)) {
-                w += c;
-            } else {
-                if (w.isBlank()) continue;
-                splitedText.add(w);
-                w = "";
-            }
-        }
-
-        //System.out.println(splitedText);
-
-        for (String t : splitedText) {
             for (String word : forbiddenWords) {
-                    if (t.equals(word)) {
+                Pattern pattern = Pattern.compile("\\b" + word + "\\b", Pattern.CASE_INSENSITIVE);
+                Matcher matcher = pattern.matcher(text);
+
+                while (matcher.find()) {
                     count.put(word, count.getOrDefault(word, 0) + 1);
                 }
             }
-        }
 
         return count;
     }
