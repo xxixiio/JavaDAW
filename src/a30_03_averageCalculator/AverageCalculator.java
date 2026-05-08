@@ -21,21 +21,21 @@ public class AverageCalculator {
             System.out.println("Array null:");
             System.out.println(calc.averageCalculator(arrayNull));
         } catch (NullPointerException e) {
-            System.out.println("Array can't be null.");
+            System.out.println(e.getMessage());
         }
 
         try {
             System.out.println("Array empty:");
             System.out.println(calc.averageCalculator(emptyArray));
         } catch (ArithmeticException e) {
-            System.out.println("Array can't be empty.");
+            System.out.println(e.getMessage());
         }
 
         try {
             System.out.println("Array with negatives:");
             System.out.println(calc.averageCalculator(arrayWithNegatives));
         } catch (IllegalArgumentException e) {
-            System.out.println("Value can't be negative.");
+            System.out.println(e.getMessage());
         }
 
         System.out.println("Array with correct data:");
