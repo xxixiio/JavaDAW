@@ -17,18 +17,14 @@ public class ReadSong {
     public String readTextFile(String file) throws IOException {
         File fileObject = new File(file);
         if (!fileObject.exists()) throw new FileNotFoundException("File not found");
-        //if (!fileObject.canExecute()) throw new IOException("Error reading file");
 
         try {
             BufferedReader input = new BufferedReader(new FileReader(file));
             StringBuilder numberedText = new StringBuilder();
 
+            String line;
             int lineCount = 1;
-            while (true) {
-                String line = input.readLine();
-                if (line == null) break;
-
-                line = line.trim();
+            while ((line = input.readLine()) != null) {
                 numberedText.append(String.format("%d: %s%n", lineCount, line));
                 lineCount += 1;
             }
