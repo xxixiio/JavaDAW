@@ -8,7 +8,6 @@ DATE=$(date +"%Y-%m-%d %H:%M")
 
 git add .
 
-# evita commits vacíos
 if git diff --cached --quiet; then
   echo "No changes to commit"
   exit 0
