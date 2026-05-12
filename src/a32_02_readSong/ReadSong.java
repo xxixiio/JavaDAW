@@ -15,9 +15,6 @@ public class ReadSong {
     }
 
     public String readTextFile(String file) throws IOException {
-        File fileObject = new File(file);
-        if (!fileObject.exists()) throw new FileNotFoundException("File not found");
-
         try {
             BufferedReader input = new BufferedReader(new FileReader(file));
             StringBuilder numberedText = new StringBuilder();
@@ -31,6 +28,8 @@ public class ReadSong {
 
             input.close();
             return numberedText.toString();
+        } catch (FileNotFoundException e) {
+            throw new FileNotFoundException("File not found");
         } catch (IOException e) {
             throw new IOException("Error reading file");
         }
