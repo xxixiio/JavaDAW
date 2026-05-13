@@ -1,0 +1,31 @@
+name;year;points;views;genre
+Your Name;2016;9.5;17000;Drama/Fantasy/Romance
+Weathering With You;AAAA;9.0;18500;Drama/Fantasy/Romance
+Jujutsu Kaisen 0;2021;8.8;22100;Action/Supernatural/Magic
+Demon Slayer: Mugen Train;2020;9.1;23500;Action/Fantasy
+Suzume;2022;8.3;12420;Drama/Fantasy
+A Silent Voice
+Akira;AAAA;9.0;21200;Sci-Fi/Action
+Maquia: When The Promised Flower Blooms;2018;8.4;15422;Fantasy/Drama
+Pompo: The Cinéphile
+Haikyu: La batalla del basurero;2024;8.0;8530;Sports/Drama
+The Garden of Sinners (Kara no Kyoukai),2007,8.2,18720,Mystery/Horror
+Liz and the Blue Bird;2018;8.1;20240;Drama/Music
+Ninja Scroll;1993;8.5;18459;Action/Adventure
+Perfect Blue;1997;8.3;16430;Psychological/Thriller
+Spirited Away;2001;9.4;19530;Fantasy/Adventure
+Fullmetal Alchemist: Conqueror of Shamballa;2005;7.9;13540;Action/Adventure
+Chainsaw Man – The Movie: Reze Arc;2025;8.7;29450;Action/Supernatural
+The First Slam Dunk;2022;8.6;28630;Sports/Drama/Comedy
+Fruits Basket: Prelude;2022;7.8;29320;Romance/Fantasy
+Cowboy Bebop: The Movie;2001;8.0;32430;Sci-Fi/Action
+One Piece Film: Red;2022;8.4;19200;Action/Adventure/Fantasy
+Howl's Moving Castle;2004;8.6;17900;Fantasy/Adventure
+Ponyo;2008;7.9;15800;Fantasy/Family
+Princess Mononoke;1997;8.7;17250;Fantasy/Action
+Stand by Me Doraemon;2014;7.3;12100;Family/Adventure
+Pokémon: The First Movie;1998;7.0;13300;Adventure/Fantasy
+The Boy and the Heron;2023;8.3;15100;Fantasy/Adventure
+Ghost in the Shell;1995;8.0;13600;Sci-Fi/Action
+The Tale of Princess Kaguya;2013;8.1;12500;Drama/Fantasy
+Wolf Children;2012;8.2;13800;Drama/Fantasy

@@ -1,0 +1,5 @@
+name;year;points;views;genre
+Suzume;2022;8.3;12420;Drama/Fantasy
+The First Slam Dunk;2022;8.6;28630;Sports/Drama/Comedy
+Fruits Basket: Prelude;2022;7.8;29320;Romance/Fantasy
+One Piece Film: Red;2022;8.4;19200;Action/Adventure/Fantasy
