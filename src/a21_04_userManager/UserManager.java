@@ -3,7 +3,6 @@ package a21_04_userManager;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class UserManager {
     List<User> users = new ArrayList<>();
