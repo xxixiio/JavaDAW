@@ -36,25 +36,24 @@ public class AnimeFilms {
 
             String line;
             while ((line = input.readLine()) != null) {
-                if (!line.matches("^.+;[0-9]{4};(10|[0-9]\\.[0-9]);[0-9]+;[A-Za-z/\\-]+$")) {
+
+                try {
+                    String[] rows = line.split(";");
+                    int animeYear = Integer.parseInt(rows[1]);
+
+                    if (animeYear == year) {
+                        filteredAnimes.append(line).append("\n");
+                    }
+                } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
                     badFormatted.append(line).append("\n");
-                    continue;
                 }
 
-                String[] rows = line.split(";");
-                int animeYear = Integer.parseInt(rows[1]);
-
-                if (animeYear == year) {
-                    filteredAnimes.append(line).append("\n");
-                }
             }
 
         } catch (FileNotFoundException e) {
             throw new FileNotFoundException(e.getMessage());
         } catch (IOException e) {
             throw new IOException(e.getMessage());
-        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
-            System.out.println(e.getMessage());
         }
 
         if (!badFormatted.isEmpty()) {
